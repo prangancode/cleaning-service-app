@@ -47,13 +47,54 @@ const solutions = [
 ]
 const resources = [
     {
-        name: 'Help Center',
-        description: 'Get all of your questions answered in our forums or contact support.',
+        name: 'Oven Cleaning',
         href: '#',
     },
-    { name: 'Guides', description: 'Learn how to maximize our platform to get the most out of it.', href: '#' },
-    { name: 'Events', description: 'See what meet-ups and other events we might be planning near you.', href: '#' },
-    { name: 'Security', description: 'Understand how we take your privacy seriously.', href: '#' },
+    {
+        name: 'Pressure Washing',
+        href: '#',
+    },
+    {
+        name: 'Gutter Cleaning',
+        href: '#',
+    },
+    {
+        name: 'Roof Cleaning',
+        href: '#',
+    },
+    {
+        name: 'Window cleaning',
+        href: '#',
+    },
+    {
+        name: 'Spring Cleaning',
+        href: '#',
+    },
+    {
+        name: 'Carpet Cleaning',
+        href: '#',
+    },
+    {
+        name: 'Upholstery Clean',
+        href: '#',
+    },
+    {
+        name: 'After Builders Clean',
+        href: '#',
+    },
+    {
+        name: 'One off Clean',
+        href: '#',
+    },
+    {
+        name: 'Deep Clean',
+        href: '#',
+    },
+    {
+        name: 'End of Tenancy',
+        href: '#',
+    },
+
 ]
 
 function classNames(...classes) {
@@ -62,7 +103,7 @@ function classNames(...classes) {
 
 const HeaderNavbar = () => {
     return (
-        <Popover className="relative bg-white">
+        <Popover className="relative bg-[#5093F7]">
             <div className="flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
                 <div className="flex justify-start lg:w-0 lg:flex-1">
                     <a href="#">
@@ -75,13 +116,13 @@ const HeaderNavbar = () => {
                     </a>
                 </div>
                 <div className="-my-2 -mr-2 md:hidden">
-                    <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                    <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 ">
                         <span className="sr-only">Open menu</span>
                         <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                     </Popover.Button>
                 </div>
-                <Popover.Group as="nav" className="hidden space-x-10 md:flex">
-                    <Popover className="relative">
+                <Popover.Group as="nav" className="hidden space-x-10 md:flex relative z-50">
+                    {/* <Popover className="relative">
                         {({ open }) => (
                             <>
                                 <Popover.Button
@@ -146,28 +187,27 @@ const HeaderNavbar = () => {
                                 </Transition>
                             </>
                         )}
-                    </Popover>
+                    </Popover> */}
 
-                    <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
-                        Pricing
+                    <a href="#" className="text-base font-medium text-white hover:text-gray-900">
+                        Home
                     </a>
-                    <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
-                        Docs
+                    <a href="#" className="text-base font-medium text-white hover:text-gray-900">
+                        About Us
                     </a>
-
                     <Popover className="relative">
                         {({ open }) => (
                             <>
                                 <Popover.Button
                                     className={classNames(
-                                        open ? 'text-gray-900' : 'text-gray-500',
-                                        'group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
+                                        open ? 'text-gray-900' : 'text-white',
+                                        'group inline-flex items-center rounded-md  text-base font-medium hover:text-gray-900'
                                     )}
                                 >
-                                    <span>More</span>
+                                    <span>Services</span>
                                     <Bars3Icon
                                         className={classNames(
-                                            open ? 'text-gray-600' : 'text-gray-400',
+                                            open ? 'text-gray-900' : 'text-white',
                                             'ml-2 h-5 w-5 group-hover:text-gray-500'
                                         )}
                                         aria-hidden="true"
@@ -193,7 +233,7 @@ const HeaderNavbar = () => {
                                                         className="-m-3 block rounded-md p-3 hover:bg-gray-50"
                                                     >
                                                         <p className="text-base font-medium text-gray-900">{resource.name}</p>
-                                                        <p className="mt-1 text-sm text-gray-500">{resource.description}</p>
+                                                        {/* <p className="mt-1 text-sm text-gray-500">{resource.description}</p> */}
                                                     </a>
                                                 ))}
                                             </div>
@@ -203,21 +243,26 @@ const HeaderNavbar = () => {
                             </>
                         )}
                     </Popover>
+                    <a href="#" className="text-base font-medium text-white hover:text-gray-900">
+                        Contact
+                    </a>
+
+
                 </Popover.Group>
-                <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-                    <a href="#" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+                <div className="relative z-50 hidden items-center justify-end md:flex md:flex-1 lg:w-0">
+                    <a href="#" className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-white px-4 py-1.5 text-base font-medium text-black shadow-sm hover:bg-white">
                         Sign in
                     </a>
                     <a
                         href="#"
-                        className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                        className="ml-4 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-white px-4 py-1.5 text-base font-medium text-black shadow-sm hover:bg-white"
                     >
                         Sign up
                     </a>
                 </div>
             </div>
 
-            <Transition
+            {/* <Transition
                 as={Fragment}
                 enter="duration-200 ease-out"
                 enterFrom="opacity-0 scale-95"
@@ -238,7 +283,7 @@ const HeaderNavbar = () => {
                                     />
                                 </div>
                                 <div className="-mr-2">
-                                    <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                                    <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 ">
                                         <span className="sr-only">Close menu</span>
                                         <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                                     </Popover.Button>
@@ -301,7 +346,7 @@ const HeaderNavbar = () => {
                         </div>
                     </div>
                 </Popover.Panel>
-            </Transition>
+            </Transition> */}
         </Popover>
     )
 }

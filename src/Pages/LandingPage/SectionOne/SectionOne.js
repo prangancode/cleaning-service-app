@@ -18,7 +18,7 @@ const SectionOne = () => {
                     <div className='grid grid-cols-2 gap-x-4' >
 
                         <div className='space-y-10 py-10 col-span-1 mt-28 relative z-40'>
-                            <div className='text-[#FFFFFF] font-semibold text-5xl font-sans'>
+                            <div className='text-[#FFFFFF] font-bold text-4xl font-sans'>
                                 <h1 className='leading-snug tracking-normal'>Professional <span className='text-[#001A41]'>Cleaning Service </span>
                                     Specialising In Both Domestic And Commercial Cleaning.
                                 </h1>
